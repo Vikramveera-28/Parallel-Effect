@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Parallel Scrolling Effect</title>
+        <link rel="Stylesheet" type="text/css" href="Style1.css">
+    </head>
+    <body>
+
+
+        <header id="header">
+            <a href="#" class="logo">Jungle</a>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Destination</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+
+
+        <section>
+            <h2 id="text"><span>It's time for a new</span><br>Adventure</h2>
+            <img src="bird1.png" id="bird1">
+            <img src="bird2.png" id="bird2">
+            <img src="forest.png" id="forest">
+            <a href="#" id="btn">Explore</a>
+            <img src="rocks.png" id="rocks">
+            <img src="water.png" id="water">
+        </section>
+
+
+        <div class="sec">
+            <h2>Parallex Scrolling Effect</h2>
+            <p>
+VIKRAM KUMAR U<br>
+vikramkumaru28@gmail.com<br>
+9514945463<br>
+640 Senthu Kinaru Street,<br>
+Thenimalai,<br>
+Tiruvannamalai.<br>
+606603.<br><br>
+
+SSLC<br>
+Dr.V.Gengusamy Naidu Matriculation Higher Secondary School, Tiruvannamalai.<br>
+74.2%<br>
+2016<br><br>
+
+HSC<br>
+Dr.V.Gengusamy Naidu Matriculation Higher Secondary School, Tiruvannamalai.<br>
+62.9%<br>
+2018<br><br>
+
+B.Sc. Mathematics<br>
+Karna Art & Science College, Tiruvannamalai.<br>
+80.5%<br>
+2021<br><br>
+
+English Telugu Tamil<br><br>
+
+VIKRAM KUMAR U<br>
+Date of Birth : 28/03/2001<br>
+Marital Status : Single<br>
+Nationality : Indian<br>
+Religion : Hindu<br>
+Gender : Male<br>
+Father's Name : UMAPATHI M<br>
+Mother's Name : KALAVANI U<br>
+PERSONAL DETAILS</p>
+        </div>
+        
+        <script>
+            let text = document.getElementById('text');
+            let bird1 = document.getElementById('bird1');
+            let bird2 = document.getElementById('bird2');
+            let btn = document.getElementById('btn');
+            let rocks = document.getElementById('rocks');
+            let forest = document.getElementById('forest');
+            let water = document.getElementById('water');
+            let header = document.getElementById('header');
+
+            window.addEventListener('scroll', function()         
+            {
+                let value = window.scrollY; 
+
+                text.style.top = 50 + value * -.5 + '%';
+                bird1.style.top = value * -1.5 + 'px';
+                bird1.style.left = value * 2 + 'px';
+                bird2.style.top = value * -1.5 + 'px';
+                bird2.style.left = value * -5  + 'px';
+                btn.style.marginTop = value * 1.5 + 'px';
+                rocks.style.top = value * 0.12 + 'px';
+                forest.style.top =value * 0.25 + 'px';
+                header.style.top = value * 0.5 + 'px';
+            })
+        </script>
+
+    </body>
+</html>
